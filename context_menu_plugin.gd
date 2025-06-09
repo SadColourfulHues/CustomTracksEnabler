@@ -32,9 +32,8 @@ func _on_process(paths: PackedStringArray) -> void:
         if !path.ends_with(&".glb"):
             continue
 
+        print("Enabling custom tracks for: ", path)
         path += &".import"
-
-        print(path)
 
         if !FileAccess.file_exists(path):
             continue
